@@ -23,34 +23,98 @@ I want to calculate the upcoming ages for friends with birthdays
 ## 2. Design the Class Interface
 
 ```python
-# EXAMPLE
 
-class Reminder:
-    # User-facing properties:
-    #   name: string
+from datetime import date
 
-    def __init__(self, name):
+class Friend:
+
+    def __init__(self, name, birthday):
         # Parameters:
-        #   name: string
+        #   self.name (string) and self.birthday (date) to store names / dobs
         # Side effects:
-        #   Sets the name property of the self object
-        pass # No code here yet
+        #   None
+        # Returns:
+        #   None
+        self.name = name
+        self.birthday = birthday
 
-    def remind_me_to(self, task):
+    def update_name(self, new_name):
         # Parameters:
-        #   task: string representing a single task
+        #   new_name (string) to update name in Class
+        # Side effects:
+        #   Will update name in Class
         # Returns:
-        #   Nothing
-        # Side-effects
-        #   Saves the task to the self object
-        pass # No code here yet
+        #   None
+        pass
 
-    def remind(self):
+    def update_birthday(self, new_birthday):
+        # Parameters:
+        #   new_birthday (date) to update birthday in Class
+        # Side effects:
+        #   Will update birthday in Class
         # Returns:
-        #   A string reminding the user to do the task
-        # Side-effects:
-        #   Throws an exception if no task is set
-        pass # No code here yet
+        #   None
+        pass
+
+    def upcoming_age(self, current_date):
+        # Parameters:
+        #   current_date (date) to calculate today's date and compare with dob
+        # Side effects:
+        #   None
+        # Returns:
+        #   None
+        pass
+
+
+class BirthdayReminder:
+
+    def __init__(self):
+        # Parameters:
+        #   None
+        # Side effects:
+        #   None
+        # Returns:
+        #   None
+        self.friends = []
+
+    def add(self, friend):
+        # Parameters:
+        #   friend: instance of Friend()
+        # Side effects:
+        #   self.friends amended
+        # Returns:
+        #   None
+        pass
+
+    def update_friend_date(self, name, new_birthday):
+        # Parameters:
+        #   name (string) for friend's name
+        #   new_birthday (date) to amend friend's dob
+        # Side effects:
+        #   self.friends amended
+        # Returns:
+        #   None        
+        pass
+
+    def update_friend_name(self, old_name, new_name):
+        # Parameters:
+        #   old_name (string) for friend's previous name
+        #   new_name (string) for friend's new name
+        # Side effects:
+        #   self.friends will be amended to change old name to new
+        # Returns:
+        #   None        
+        pass
+
+    def get_upcoming_birthdays(self, current_date, days_ahead=30):
+        # Parameters:
+        #   current_date (date) to calculate friend's upcoming age
+        #   days_ahead (int) to calculate dob from current date  
+        # Side effects:
+        #   None
+        # Returns:
+        #   List of birthdays that fall within a certain window (i.e. next 30 days)
+        pass
 ```
 
 ## 3. Create Examples as Tests
